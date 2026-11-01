@@ -255,6 +255,8 @@ public class MainActivity extends Activity {
                 }
 
                 double finalTotal = total;
+                final double finalOver = over;
+final double finalUnder = under;
                 runOnUiThread(() -> {
                     list.removeAllViews();
                     addText("⚽ " + home + " - " + away);
@@ -264,8 +266,8 @@ public class MainActivity extends Activity {
                     addText("2 - Oaspeți: " + percent(scores[2]/finalTotal));
 
                     addText("GOLURI");
-                    addText("Peste 2.5: " + percent(over));
-                    addText("Sub 2.5: " + percent(under));
+                    addText("Peste 2.5: " + percent(finalOver));
+addText("Sub 2.5: " + percent(finalUnder));
 
                     addText("TOP 10 SCORURI CORECTE");
                     for(int i=0;i<10;i++)
